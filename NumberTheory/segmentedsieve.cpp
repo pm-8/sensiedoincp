@@ -44,7 +44,7 @@ int main()
         }
         for(int i = m; i <= n; i++){
             if(segment[i - m] == 0 && i!=1){
-                cout << i << endl;
+                cout << i << " ";
             }
         }
         cout << endl;
