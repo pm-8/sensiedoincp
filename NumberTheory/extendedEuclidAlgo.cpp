@@ -18,6 +18,7 @@ vector<int> extendedGCD(int a, int b){
 
     int x = smallY;
     int y = smallX - (a/b)*smallY;
+    
     return {x,y};
 }
 int main(){
@@ -25,5 +26,6 @@ int main(){
     cin >> a >> b;
     vector<int> v = extendedGCD(a,b);
     cout << v[0] << " " <<  v[1] << endl;
+    cout << a*v[0] + b*v[1] << endl;
     return 0;
 }
