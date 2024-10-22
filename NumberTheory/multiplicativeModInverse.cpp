@@ -21,12 +21,20 @@ vector<int> extendedGCD(int a, int b){
     
     return {x,y,gcd};
 }
+int modInverse(int a, int m){
+    vector<int> result = extendedGCD(a, m);
+    int x = result[0];
+    int gcd = result[2];
+    if(gcd != 1){
+        cout << "Multiplicative modulo inverse doesn't exist";
+        return -1;
+    }
+    int ans = (x%m+m)%m;
+    return ans;
+}
 int main(){
-    int a, b;
-    cin >> a >> b;
-    vector<int> v = extendedGCD(a,b);
-    cout << v[0] << " " <<  v[1] << endl;
-    cout << a*v[0] + b*v[1] << endl;
-    cout << gcd << endl;
+    int a,m;
+    cin >> a >> m;
+    cout << modInverse(a,m) << endl;
     return 0;
 }
