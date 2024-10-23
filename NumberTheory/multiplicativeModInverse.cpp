@@ -35,6 +35,7 @@ int modInverse(int a, int m){
 int main(){
     int a,m;
     cin >> a >> m;
-    cout << modInverse(a,m) << endl;
+    cout << modInverse(a,m);
+    cout << endl;
     return 0;
 }
