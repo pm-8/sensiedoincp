@@ -20,6 +20,18 @@ long long iterative_power(long long a, long long b){
     }
     return res;
 }
+long long fast_multiplication(long long a, long long b, long long c){
+    long long res = 0;
+    while(b--){
+        if(b&1)
+        res+=a;
+        res%=c;
+        a=a%c;
+        a = 2*a;
+        b >>=1;
+    }
+    return res;
+}
 int main()
 {
     int b =8;
