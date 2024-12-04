@@ -32,7 +32,7 @@ class Solution {
         int vis[adj.size()] = {0};
         for(int i = 0; i < adj.size(); i++){
             if(!vis[i]){
-                if(detect(i,adj,vis) == true) return true;
+                if(detect(i,adj,vis)) return true;
             }
         }
         return false;
