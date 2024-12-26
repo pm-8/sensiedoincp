@@ -23,8 +23,6 @@ void dfs(int cur, int par) {
 
 int main()
 {
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
 
 	int n, m;
 	cin >> n >> m;
