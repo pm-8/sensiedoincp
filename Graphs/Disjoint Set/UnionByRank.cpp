@@ -13,7 +13,7 @@ public:
 
     void addEdge(int u, int v) {
         l.push_back(make_pair(u, v));
-    }
+    } 
 
     // FIND
     int findSet(int i, int parent[]) {
