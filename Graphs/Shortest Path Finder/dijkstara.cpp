@@ -25,40 +25,10 @@ public:
 	}
 
 	int dijkstra(int src,int dest){
-        //Data Structures
-        vector<int> dist(V,INFINITY);
-        vector<bool> visited(V,false);
+        vector<int> dis(V,INT_MAX);
         set<pair<int,int>> s;
-        //1. INIT
         dist[src] = 0;
-        s.insert({0,src});
-        while(!s.empty()){
-            auto it = s.begin();
-            int node = it -> second;
-            int distTillNow = it -> first;
-            s.erase(it);
-            //Iterate over the nbrs of node
-            for(auto nbrPair : l[node]){
-                //.........
-                int nbr = nbrPair.second;
-                int currentEdge = nbrPair.first;
-                if(distTillNow+currentEdge < dist[nbr]){
-                    //remove if nbr already exist in the set
-                    auto f = s.find({dist[nbr],nbr});
-                    if(f!=s.end()){
-                        s.erase(f);
-                    }
-                    //insert the updated value with the new dist
-                    dist[nbr] = distTillNow + currentEdge;
-                    s.insert({dist[nbr],nbr});
-                }
-            }
-
-        }
-
-	}
-
-};
+    };
 
 int main(){
 

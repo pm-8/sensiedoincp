@@ -47,7 +47,7 @@ class Graph{
     }
     int kruskal_mst(){
         //Main Logic = EASY!!!
-        sort(edgelist.begin(),edgelist.end());
+        sort(edgelist.rbegin(),edgelist.rend());
         int ans = 0;
         DSU s(V);
         for(auto edge : edgelist){
