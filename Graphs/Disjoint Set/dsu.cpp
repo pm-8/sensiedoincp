@@ -1,55 +1,69 @@
-/*
-Union(u,v)
-1. Find ultimate parent of u & v which would be pu and pv
-2. Find rank of pu and pv.
-3. Connect smaller ranks to larger ranks always.
-*/
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+#define int long long
+#define INF 1000000007
+#define N 200005 
 using namespace std;
-class DisjointSet{
-    vector<int> rank, parent;
-    public:
-    DisjointSet(int n){
-        rank.resize(n+1, 0);
-        parent.resize(n+1);
-        for(int i = 0; i <= n; i++){
-            parent[i] = i;
-        }
+void solve(){
+    int n;
+    cin >> n;
+    vector<vector<int>> g(n + 1);
+    for (int i = 0; i < n; i++) {
+        int u, v;
+        cin >> u >> v;
+        g[u].push_back(v);
+        g[v].push_back(u);
     }
-    int findUPar(int node){
-        if(node == parent[node]) return node;
-        return parent[node] = findUPar(parent[node]);
+    // cout << "HEY" << endl
+    vector<pair<int,int>> v;
+    for(int i = 1; i <= n; i++){
+        v.push_back({g[i].size(),i});
+        // cout << g[i].size() << " " << i << endl;
     }
-    void unionByRank(int u, int v){
-        int ulp_u = findUPar(u);
-        int ulp_v = findUPar(v);
-        if(ulp_u == ulp_v) return;
-        if(rank[ulp_u] < rank[ulp_v]){
-            parent[ulp_u] = ulp_v;
-        }
-        else if(rank[ulp_v] < rank[ulp_u]){
-            parent[ulp_v] = ulp_u;
-        }
-        else{
-           parent[ulp_v] = ulp_u;
-           rank[ulp_u]++;
-        }
+    // cout << endl;
+    for(int i : g[5]){
+        cout << i << endl;
     }
-};
-int main()
-{
-    DisjointSet ds(7);
-    ds.unionByRank(1,2);
-    ds.unionByRank(2,3);
-    ds.unionByRank(4,5);
-    ds.unionByRank(6,7);
-    ds.unionByRank(5,6);
-    if(ds.findUPar(3) == ds.findUPar(7)){
-        cout << "Same" << endl;
+    // sort(v.rbegin(),v.rend());
+    // vector<int> vis(n+1,-1);
+    // int a = v[0].second;
+    // int b;
+    // if(v[1].first == v[2].first) b = v[2].second;
+    // else
+    // b = v[1].second;
+    // // cout << a << b << v[2].second <<  endl;
+    // vis[a] = vis[b] = 1;
+    // function<void(int)> dfs = [&](int i){
+    //     vis[i] = 1;
+    //     for(int adjNode : g[i]){
+    //         if(vis[adjNode] == -1){
+    //             dfs(adjNode);
+    //         }
+    //     }
+    // };
+    // int c = 0;
+    // for(int i = 1; i <= n; i++){
+    //     if(vis[i] != -1) continue;
+    //     dfs(i);
+    //     c++;
+    // }
+    // cout << c << endl;
+}
+int32_t main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+// #ifndef ONLINE_JUDGE
+//     freopen("input.txt", "r", stdin);
+//     freopen("opp.txt", "w", stdout);
+// #endif
+
+    int t;
+    t = 1;
+    cin >> t;
+    while (t--) {
+        solve();
     }
-    else{
-        cout << "Not Same" << endl;
-    }
-    ds.unionByRank(3,7);
+
     return 0;
 }
