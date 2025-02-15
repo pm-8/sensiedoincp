@@ -4,6 +4,7 @@
         "ostream": "cpp",
         "xiosbase": "cpp",
         "algorithm": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "utility": "cpp"
     }
 }
