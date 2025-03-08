@@ -5,6 +5,7 @@
         "xiosbase": "cpp",
         "algorithm": "cpp",
         "list": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "vector": "cpp"
     }
 }

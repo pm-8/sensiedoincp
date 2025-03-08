@@ -12,12 +12,13 @@ public:
         l.push_back(make_pair(u,v));
     }
     //FIND
-    int findSet(int i, int parent[]){
+    int findSet(int i, in t parent[]){
         //base case
         if(parent[i] == -1){
             return i;
         }
-        return findSet(parent[i], parent);
+        //path compression optimisation
+        return parent[i] = findSet(parent[i], parent);
     }
     //UNION
     void union_set(int x, int y, int parent[]){
@@ -54,10 +55,11 @@ public:
 int main()
 {
     Graph g(4);
-    g.addEdge(0,1);
-    g.addEdge(1,2);
+    g.addEdge(0,2);
+    g.addEdge(1,0);
+    g.addEdge(1,3);
+    g.addEdge(2,1);
     g.addEdge(2,3);
-    g.addEdge(3,0);
     cout << g.contains_cycle() << endl;
     return 0;
 }
