@@ -136,8 +136,6 @@ int main()
 
     // upper bound to 
     int X = 6;
-
-    // Function Call
     printBound(arr, N, X);
     return 0;
 }
