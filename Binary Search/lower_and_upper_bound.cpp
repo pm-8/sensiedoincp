@@ -134,7 +134,6 @@ int main()
     int arr[] = { 4, 6, 10, 12, 18, 20 };
     int N = sizeof(arr) / sizeof(arr[0]);
 
-    // Element whose lower bound and
     // upper bound to be found
     int X = 6;
 
