@@ -131,7 +131,6 @@ void printBound(int arr[], int N, int X)
 
 int main()
 {
-    // Given array
     int arr[] = { 4, 6, 10, 12, 18, 20 };
     int N = sizeof(arr) / sizeof(arr[0]);
 
