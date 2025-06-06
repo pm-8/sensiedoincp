@@ -134,7 +134,7 @@ int main()
     int arr[] = { 4, 6, 10, 12, 18, 20 };
     int N = sizeof(arr) / sizeof(arr[0]);
 
-    // upper bound to be found
+    // upper bound to b
     int X = 6;
 
     // Function Call
