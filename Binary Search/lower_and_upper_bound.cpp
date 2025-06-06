@@ -129,7 +129,6 @@ void printBound(int arr[], int N, int X)
     }
 }
 
-// Driver Code
 int main()
 {
     // Given array
