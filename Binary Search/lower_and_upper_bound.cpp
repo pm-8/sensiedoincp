@@ -99,8 +99,6 @@ int upper_bound(int arr[], int N, int X)
 void printBound(int arr[], int N, int X)
 {
     int idx;
-
-    // If lower_bound doesn't exists
     if (lower_bound(arr, N, X) == N) {
         printf("Lower bound doesn't exist");
     }
