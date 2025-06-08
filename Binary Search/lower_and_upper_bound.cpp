@@ -95,7 +95,6 @@ int upper_bound(int arr[], int N, int X)
 }
 
 // Function to implement lower_bound
-// and upper_bound of X
 void printBound(int arr[], int N, int X)
 {
     int idx;
