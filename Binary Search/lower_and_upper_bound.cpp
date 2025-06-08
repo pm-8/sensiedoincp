@@ -102,7 +102,6 @@ void printBound(int arr[], int N, int X)
         printf("Lower bound doesn't exist");
     }
     else {
-
         // Find lower_bound
         idx = lower_bound(arr, N, X);
         printf("Lower bound of %d is"
