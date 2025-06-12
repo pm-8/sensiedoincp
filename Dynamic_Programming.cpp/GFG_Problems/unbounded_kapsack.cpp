@@ -14,9 +14,9 @@ class Solution {
         // code here
         int n = wt.size();
         vector<vector<int>> dp(n+1,vector<int>(capacity+1,0));
-        for(int i = 0; i <= capacity; i++){
-            dp[0][i] = 0;
-        }
+        // for(int i = 0; i <= capacity; i++){
+        //     dp[0][i] = 0;
+        // }
         for(int i = 1; i <= n; i++){
             for(int j = 1; j <= capacity; j++){
                 if(j-wt[i-1] >= 0)
