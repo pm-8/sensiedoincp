@@ -36,7 +36,6 @@ vector<Node*> getTrees(int start, int end) {
 
         // Generate all right sub
         vector<Node*> rightTrees = getTrees(i + 1, end);
-
         // Combine each left and right subtree with 
       	// the current root
         for (Node* left : leftTrees) {
