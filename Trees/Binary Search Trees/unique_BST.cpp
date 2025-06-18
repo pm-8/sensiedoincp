@@ -1,4 +1,3 @@
-// C++ program to find all binary trees
 // from 1 to n
 
 #include <bits/stdc++.h>
