@@ -12,7 +12,7 @@ public:
         l.push_back(make_pair(u,v));
     }
     //FIND
-    int findSet(int i, in t parent[]){
+    int findSet(int i, int parent[]){
         //base case
         if(parent[i] == -1){
             return i;
