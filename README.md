@@ -29,6 +29,7 @@ This technique is used when the answer space is *monotonic* (e.g., *maximizing t
 | 016 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | LeetCode | Hard | [Source](./solutions/split_array.cpp) |
 | 017 | [Aggressive Cows](https://www.spoj.com/problems/AGGRCOW/) | SPOJ | Hard | [Source](./solutions/aggressive_cows.cpp) 
 | 018 | [Min Max MEX](https://codeforces.com/contest/2093/problem/E) | Codeforces | 1500 | [Source](https://codeforces.com/contest/2093/submission/354990965) 
+| 019 | [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children/description/) | Leetcode | Medium |  
 
 </details>
 
