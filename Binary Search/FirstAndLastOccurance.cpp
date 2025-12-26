@@ -1,7 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//Function for finding last occurrence of x
+/*
+Lower Bound is the smallest index that has the element greater than equal to x
+Upper Bound is the smallest index that has the element greater than x
+*/
 int findLast(vector<int> arr, int x) {
     int n = arr.size();
 
